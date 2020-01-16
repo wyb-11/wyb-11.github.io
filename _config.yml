@@ -96,6 +96,6 @@ deploy:
 backup:
   type: git
   theme: Annie
-  message: Back up my Bing blog
+  message: 备份操作
   repository:
     github: git@github.com:wyb-11/wyb-11.github.io.git,backup
