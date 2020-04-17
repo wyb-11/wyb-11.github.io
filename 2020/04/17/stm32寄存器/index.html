@@ -320,13 +320,13 @@
 
 	<div class="article-content" id="article-content">
 		<p>#stm32 什么是寄存器<br>首先要明白什么是存储器映射、什么是寄存器映射。下面这些是帮助理解的。   </p>
-<img src="/1.png" width="600" height = "390">
+<img src="/1.png" width="600" height="390">
 内核是主控器（Master）是ARM公司设计的。总线矩阵下的所有东西叫做被控器（Slave）是STM公司设计的。过程是这样的ARM公司把设计好的内核卖给STM公司，STM接着设计添加东西。
 
-<p><img src="pictures/2.png" alt="image"></p>
-<p>程序（即程序编译后的一条条指令）放在Flash中，内核Cortex-M3是读取Flash中的程序。<br>SRAM是用来存储变量的；FMSC是用来外存的，液晶模块有讲到<br>ARM的Cortex-M3内核是32位的，2的32次方是4GB（内存）。4GB内存分为8块。<br>上图所有的红色部分都可以是外设，这些外设都是放在一块线性的存储器中的。STM在设计芯片的时候会开辟一片内存，内存很大地址是0到4GB。<font color=purple size=4>我们编程时就是要编程这些内存。</font></p>
+<p><img src="/2020/04/17/stm32%E5%AF%84%E5%AD%98%E5%99%A8/2.png" alt></p>
+<p>程序（即程序编译后的一条条指令）放在Flash中，内核Cortex-M3是读取Flash中的程序。<br>SRAM是用来存储变量的；FMSC是用来外存的，液晶模块有讲到<br>ARM的Cortex-M3内核是32位的，2的32次方是4GB（内存）。4GB内存分为8块。<br>上图所有的红色部分都可以是外设，这些外设都是放在一块线性的存储器中的。STM在设计芯片的时候会开辟一片内存，内存很大地址是0到4GB。<font color="purple" size="4">我们编程时就是要编程这些内存。</font></p>
 <p>此图是讲4GB的存储空间（内存）分成8块的具体内容  </p>
-<p><img src="pictures/3.png" alt=""></p>
+<p><img src="/2020/04/17/stm32%E5%AF%84%E5%AD%98%E5%99%A8/3.png" alt></p>
 <p><strong>存储器映射： 是一个过程，一个给存储器分配地址的过程</strong> </p>
 <p><strong>寄存器：给一个特定功能的内存单元取别名，这个别名就叫寄存器</strong></p>
 <p><strong>寄存器映射：一个过程，一个给已经分配好地址的有特定功能的内存单元取别的过程</strong></p>
