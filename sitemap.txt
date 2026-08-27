@@ -1,3 +1,9 @@
-https://wyb-11.github.io/2019/11/24/hello-world/
 https://wyb-11.github.io/2020/04/17/stm32-register/
+https://wyb-11.github.io/2026/08/23/UploadFiles_ToGithub/
 https://wyb-11.github.io/
+https://wyb-11.github.io/tags/github/
+https://wyb-11.github.io/tags/hexo/
+https://wyb-11.github.io/tags/%E5%8D%9A%E5%AE%A2/
+https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/
+https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/Github%E7%9A%84%E4%BD%BF%E7%94%A8/
+https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/

@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wyb-11.github.io/2019/11/24/hello-world/</loc>
+    <loc>https://wyb-11.github.io/2020/04/17/stm32-register/</loc>
     
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wyb-11.github.io/2020/04/17/stm32-register/</loc>
+    <loc>https://wyb-11.github.io/2026/08/23/UploadFiles_ToGithub/</loc>
     
-    <lastmod>2020-08-01</lastmod>
+    <lastmod>2026-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -28,6 +28,48 @@
   </url>
 
   
+  <url>
+    <loc>https://wyb-11.github.io/tags/github/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/tags/hexo/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/Github%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
