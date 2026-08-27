@@ -9,13 +9,12 @@
   <link href="https://wyb-11.github.io/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, John Doe</rights>
   <title>夏天-冰激凌</title>
-  <updated>2026-08-27T04:35:42.608Z</updated>
+  <updated>2026-08-27T11:45:14.502Z</updated>
   <entry>
     <author>
       <name>John Doe</name>
     </author>
-    <category term="教程" scheme="https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    <category term="Github的使用" scheme="https://wyb-11.github.io/categories/%E6%95%99%E7%A8%8B/Github%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <category term="工具/关于Github的使用" scheme="https://wyb-11.github.io/categories/%E5%B7%A5%E5%85%B7-%E5%85%B3%E4%BA%8EGithub%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <category term="github" scheme="https://wyb-11.github.io/tags/github/"/>
     <category term="hexo" scheme="https://wyb-11.github.io/tags/hexo/"/>
     <category term="博客" scheme="https://wyb-11.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
@@ -30,13 +29,14 @@
 <h2 id="1-进入Github首页，点击New-repository新建一个项目"><a href="#1-进入Github首页，点击New-repository新建一个项目" class="headerli]]>
     </summary>
     <title>如何将文件上传到github仓库中</title>
-    <updated>2026-08-27T04:35:42.608Z</updated>
+    <updated>2026-08-27T11:45:14.502Z</updated>
   </entry>
   <entry>
     <author>
       <name>John Doe</name>
     </author>
-    <category term="硬件相关的" scheme="https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/"/>
+    <category term="硬件相关的/stm32" scheme="https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84-stm32/"/>
+    <category term="stm32" scheme="https://wyb-11.github.io/tags/stm32/"/>
     <content>
       <![CDATA[<meta name="referrer" content="no-referrer" /><p><strong>寄存器：给一个特定功能的内存单元取别名，这个别名就叫寄存器</strong><br><strong>寄存器映射：一个过程，一个给已经分配好地址的有特定功能的内存单元取别的过程</strong><br><strong>存储器映射： 是一个过程，一个给存储器分配地址的过程</strong> </p><p><strong>注意：本文提到的所有“存储器”，统统指的是“内存”（即芯片内部可直接寻址的 4GB 线性空间），而不是“外存”（如硬盘、U 盘、SD 卡）。</strong></p><h2 id="一、整体架构：内核与存储器映射"><a href="#一、整体架构：内核与存储器映射" class="headerlink" title="一、整体架构：内核与存储器映射"></a>一、整体架构：内核与存储器映射</h2><p>首先需要理解两个核心概念：<strong>存储器映射</strong>和<strong>寄存器映射</strong>。</p><hr><p><strong>存储器映射</strong>，是指给芯片的存储空间（从地址 <code>0x0000 0000</code> 到 <code>0xFFFF FFFF</code>共 4GB，且CPU 能够直接通过地址总线访问）分配具体功能的过程。这 4GB 的地址空间被划分为 8 个不同的块（Block），分别用于存放程序代码（Flash）、变量（SRAM）、外部存储器（FSMC）以及各种外设。这个空间包含了 Flash（代码区）、SRAM（变量区）和各个外设的寄存器区，它们统称为“内存映像”</p><hr><p>程序（即程序编译后的一条条指令）放在Flash中，内核Cortex-M3是读取Flash中的程序，SRAM是用来存储变量的；FMSC是用来外存的</p><p>Flash：虽然它名字里带个“闪存”，跟 U 盘同宗同源，但在嵌入式领域，我们把它叫做 “程序存储器”，因为它直接挂在 CPU 的总线上，CPU 直接从中取指执行。它属于内存的一部分（只读执行区）。</p><p>SRAM：就是运行内存，完全符合你对“内存”的理解。</p><hr><p><img src="/stm32-register/3.png"></p><h2 id="二、存储器映射：外设的统一编址"><a href="#二、存储器映射：外设的统一编址" class="headerlink" title="二、存储器映射：外设的统一编址"></a>二、存储器映射：外设的统一编址</h2><p>在 STM 芯片中，所有外设（上图红色部分）都被统一编址在这 4GB 的存储器空间内。也就是说，外设的寄存器、控制逻辑等，都有各自对应的固定地址。</p><p>这种将外设地址统一纳入存储器地址空间的设计方式，使得 CPU 可以像访问普通内存一样，通过指针或地址来访问和控制外设。</p><h2 id="三、寄存器映射：为地址取别名"><a href="#三、寄存器映射：为地址取别名" class="headerlink" title="三、寄存器映射：为地址取别名"></a>三、寄存器映射：为地址取别名</h2><p><strong>寄存器</strong>，本质上是为某个具有特定功能的内存单元所取的别名。每一个寄存器都对应一个唯一的物理地址，用于控制或读取外设的状态。</p><p>而<strong>寄存器映射</strong>，则是给这些已经分配好地址的功能单元赋予别名（即寄存器名）的过程。通过这种方式，程序员无需记忆繁琐的十六进制地址，只需使用易于理解的寄存器名称（如 <code>GPIOA-&gt;ODR</code>）即可操作硬件，大大提高了代码的可读性和开发效率。</p><h2 id="四、stm32系统框图"><a href="#四、stm32系统框图" class="headerlink" title="四、stm32系统框图"></a>四、stm32系统框图</h2><p>ARM 公司设计的 Cortex-M3 内核是 32 位的，2的32次方是4GB（内存）。4GB内存分为8块。  内核作为主控器（Master）负责读取 Flash 中的指令并执行；而 STM 公司在获得内核授权后，则围绕它设计总线矩阵和所有被控器（Slave），并将各类外设都挂载到这块线性的存储器空间上。我们写程序时，本质上就是在操作这些特定地址上的内存单元。</p><p>上图所有的红色部分都可以是外设，这些外设都是放在一块线性的存储器中的。STM在设计芯片的时候会开辟一片内存，内存很大地址是0到4GB。</p><p><img src="/stm32-register/2.png"></p>]]>
     </content>
@@ -50,6 +50,6 @@
 <p><strong>寄存器：给一个特定功能的内存单元取别名，这个别名就叫寄存器</strong><br><strong>寄存器映射：一个过程，一个给已经分配好地址的有特定功能的内存]]>
     </summary>
     <title>*stm32中的寄存器*</title>
-    <updated>2026-08-27T11:30:35.927Z</updated>
+    <updated>2026-08-27T11:45:44.606Z</updated>
   </entry>
 </feed>
