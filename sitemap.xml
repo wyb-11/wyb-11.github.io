@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wyb-11.github.io/tags/index.html</loc>
+    
+    <lastmod>2026-08-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/index.html</loc>
+    
+    <lastmod>2026-08-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wyb-11.github.io/2026/08/27/stm32-register/</loc>
     
     <lastmod>2026-08-27</lastmod>
@@ -22,7 +40,7 @@
 
   <url>
     <loc>https://wyb-11.github.io/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -30,28 +48,28 @@
   
   <url>
     <loc>https://wyb-11.github.io/tags/github/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wyb-11.github.io/tags/hexo/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wyb-11.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wyb-11.github.io/tags/stm32/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -59,29 +77,29 @@
 
   
   <url>
-    <loc>https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/stm32/</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wyb-11.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://wyb-11.github.io/categories/%E5%B7%A5%E5%85%B7/%E5%85%B3%E4%BA%8EGithub%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wyb-11.github.io/categories/%E7%A1%AC%E4%BB%B6%E7%9B%B8%E5%85%B3%E7%9A%84/stm32/</loc>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
